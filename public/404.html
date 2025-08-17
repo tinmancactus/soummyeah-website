@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Page Not Found | So Umm Yeah</title>
+    <script>
+      // GitHub Pages 404 redirect to SPA handler
+      // This redirects all 404s back to the index.html with the path as a query parameter
+      const segment = location.pathname.split('/').filter(p => p);
+      const repo = segment[0]; // 'soummyeah-website' or empty if custom domain
+      
+      // Remove the repo name from the path if it exists
+      const path = location.pathname
+        .replace(new RegExp(`^\/${repo}\/`), '/')
+        .replace(/\/$/, '')
+        .replace(/^$/, '/');
+
+      // Redirect to the index with the path as the route parameter
+      window.location.href = `${location.origin}${repo ? '/' + repo : ''}/#${path}`;
+    </script>
+    <meta http-equiv="refresh" content="0;url=/">
+  </head>
+  <body>
+    <h1>Page Not Found</h1>
+    <p>The requested page could not be found.</p>
+    <p>Redirecting to <a href="/">homepage</a>...</p>
+  </body>
+</html>

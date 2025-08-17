@@ -21,7 +21,9 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       ]
-    }
+    },
+    // Use baseURL from env var for GitHub Pages if available
+    baseURL: process.env.GITHUB_PAGES === 'true' ? '/soummyeah-website/' : '/'
   },
 
   // Configure Nuxt Content for markdown
@@ -44,9 +46,11 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: 'static',
+    // Use github_pages preset when running in GitHub Actions
+    preset: process.env.NITRO_PRESET || 'static',
     prerender: {
       crawlLinks: true,
+      // Don't fail build on errors during prerendering
       failOnError: false,
       routes: [
         '/',

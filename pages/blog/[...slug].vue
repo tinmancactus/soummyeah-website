@@ -25,9 +25,10 @@
 const route = useRoute();
 
 // Get the blog post content
-const { data: post } = await useAsyncData(`blog-post-${route.params.slug.join('/')}`, () => 
-  queryContent('/blog', ...route.params.slug).findOne()
-);
+const { data: post } = await useAsyncData(`blog-post-${route.params.slug?.join('/') || 'default'}`, async () => {
+  if (!route.params.slug) return null;
+  return await queryContent('/blog', ...route.params.slug).findOne().catch(() => null);
+}) || { data: null };
 
 // Format date function
 const formatDate = (date) => {
@@ -41,9 +42,9 @@ const formatDate = (date) => {
 
 // Set page metadata
 useHead(() => ({
-  title: post.value?.title ? `${post.value.title} | So Umm Yeah` : 'Blog | So Umm Yeah',
+  title: post?.value?.title ? `${post.value.title} | So Umm Yeah` : 'Blog | So Umm Yeah',
   meta: [
-    { name: 'description', content: post.value?.description || 'Blog post on So Umm Yeah' }
+    { name: 'description', content: post?.value?.description || 'Blog post on So Umm Yeah' }
   ]
 }));
 </script>

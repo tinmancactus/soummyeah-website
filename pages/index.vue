@@ -8,7 +8,7 @@
     
     <section class="section">
       <h2>Latest Blog Posts</h2>
-      <div v-if="posts.length">
+      <div v-if="posts && posts.length">
         <div v-for="post in posts" :key="post._path" class="blog-post">
           <h3>
             <NuxtLink :to="post._path">{{ post.title }}</NuxtLink>
@@ -42,7 +42,7 @@ const { data: posts } = await useAsyncData('home-posts', () => queryContent('/bl
   .sort({ date: -1 })
   .limit(3)
   .find()
-);
+) || { data: [] };
 
 // Sample featured projects (to be replaced with actual data)
 const featuredProjects = [

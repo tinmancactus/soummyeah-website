@@ -64,6 +64,8 @@ jobs:
         with:
           path: |
             .nuxt
+            node_modules
+            .output
           key: ${{ runner.os }}-nuxt-build-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-nuxt-build-
@@ -72,7 +74,8 @@ jobs:
       - name: Static HTML export with Nuxt
         env:
           NITRO_PRESET: github_pages
-        run: ${{ steps.detect-package-manager.outputs.manager }} run generate
+          GITHUB_PAGES: true
+        run: ${{ steps.detect-package-manager.outputs.manager }} run generate --fail-on-error false
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -9,7 +9,8 @@
           <NuxtLink to="/about" class="nav-link">About</NuxtLink>
           <NuxtLink to="/blog" class="nav-link">Blog</NuxtLink>
           <NuxtLink to="/speaking" class="nav-link">Speaking</NuxtLink>
-          <NuxtLink to="/projects" class="nav-link">Projects</NuxtLink>
+          <NuxtLink to="/contact" class="nav-link">Contact</NuxtLink>
+          <!-- <NuxtLink to="/projects" class="nav-link">Projects</NuxtLink> -->
         </nav>
       </div>
     </header>

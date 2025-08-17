@@ -23,7 +23,7 @@
       </div>
     </section>
     
-    <section class="section">
+    <!-- <section class="section">
       <h2>Featured Projects</h2>
       <div class="project-grid">
         <div v-for="project in featuredProjects" :key="project.id" class="project-card">
@@ -32,7 +32,7 @@
           <NuxtLink :to="'/projects/' + project.id" class="button">View Project</NuxtLink>
         </div>
       </div>
-    </section>
+    </section> -->
   </div>
 </template>
 

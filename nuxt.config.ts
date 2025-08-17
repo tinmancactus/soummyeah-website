@@ -4,9 +4,11 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content'
   ],
+
   css: [
     '~/assets/css/main.css'
   ],
+
   app: {
     head: {
       title: 'So Umm Yeah',
@@ -21,6 +23,7 @@ export default defineNuxtConfig({
       ]
     }
   },
+
   // Configure Nuxt Content for markdown
   content: {
     highlight: {
@@ -33,11 +36,13 @@ export default defineNuxtConfig({
       }
     }
   },
+
   typescript: {
     shim: false,
     strict: false,
     typeCheck: false
   },
+
   nitro: {
     preset: 'static',
     prerender: {
@@ -57,12 +62,16 @@ export default defineNuxtConfig({
       publicDir: '.output/public'
     }
   },
+
   // Set CI mode to avoid TTY prompts
   cli: {
     tty: false
   },
+
   // Set a specific port to avoid conflicts
   devServer: {
     port: 3000
-  }
+  },
+
+  compatibilityDate: '2025-08-17'
 });

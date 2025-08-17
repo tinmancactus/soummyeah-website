@@ -4,7 +4,7 @@
     
     <div class="about-content">
       <div class="about-text">
-        <p class="lead">Learning Experience Designer, Creative Technologist and Automation Wizard passionate about creating engagine interactive learning experiences, and making life easier for educators and designers.</p>
+        <p class="lead">Learning Experience Designer, Creative Technologist and Automation Wizard passionate about creating engaging interactive learning experiences, and making life easier for educators and designers.</p>
         
         <h2>My Background</h2>
         <p>
@@ -12,13 +12,13 @@
         </p>
         
         <h2>My Approach</h2>
-        <p>I am a strong believer the following catch phrases:</p>
+        <p>I am a strong believer the following:</p>
         <ul>
           <li>Don't make me think</li>
           <li>Keep it simple, stupid</li>
           <li>Work smarter, not harder.</li>
         </ul>
-        <p>Put these together and you have an approach to educational design that puts students first, focusing on intuitive learning experiences that put the content first and minimises distractions.</p>
+        <p>Put these together and you have an approach to educational design that focuses on intuitive learning experiences that put the content first and minimises distractions.</p>
         <p>I care about usability and accessibility, and I believe that the best learning experiences are those that work for <strong>all students.</strong></p>
         
         <h2>Skills & Expertise</h2>

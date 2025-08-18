@@ -21,7 +21,7 @@ rm -rf .output
 touch .nojekyll
 
 # Configure custom domain if needed (uncomment and modify if you have one)
-# echo "yourdomain.com" > CNAME
+echo "soummyeah.au" > CNAME
 
 # Commit changes
 echo "Committing changes..."

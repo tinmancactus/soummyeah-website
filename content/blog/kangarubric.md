@@ -36,4 +36,4 @@ We're developing about 2,500 courses for Adelaide University. If Kangarubric sav
 ### Try it yourself
 While Kangarubric is intended specifically for Adelaide University, it is publicly available for anyone to use - as long as you're happy with our grading scheme!
 If your organisation could benefit from something like Kangarubric, I encourage you to try making your own. If you do, please get in touch and share it with me.
-[You can download a Kanga-compatible Word template here](/files/rubric_template.docx). Fill it out, upload it to Kangarubric and experience the joy of never having to recreate a rubric in Canvas again.
+[You can download a Kanga-compatible Word template here](https://soummyeah.au/files/rubric_template.docx). Fill it out, upload it to Kangarubric and experience the joy of never having to recreate a rubric in Canvas again.

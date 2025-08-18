@@ -3,6 +3,7 @@ set -e
 
 # Generate static site
 echo "Generating static site..."
+npm install
 npm run generate
 
 # Create or switch to gh-pages branch

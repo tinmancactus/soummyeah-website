@@ -217,6 +217,11 @@ button:hover, .button:hover {
   opacity: 0.7;
 }
 
+/* Mobile navigation specific styles */
+.mobile-nav {
+  display: none; /* Hide by default, will be shown with JS */
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
   .header-inner {
@@ -228,7 +233,14 @@ button:hover, .button:hover {
     display: block;
   }
   
-  .nav {
+  /* Hide static nav on mobile when JS is enabled */
+  .js-enabled .static-nav {
+    display: none;
+  }
+  
+  /* Show mobile nav when JS is enabled */
+  .js-enabled .mobile-nav {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -247,7 +259,8 @@ button:hover, .button:hover {
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
   }
   
-  .nav-open {
+  /* Show mobile nav when open */
+  .js-enabled .mobile-nav.nav-open {
     transform: translateX(0);
   }
   

@@ -14,7 +14,7 @@
     </section> -->
     
     <section class="section">
-      <h2>Upcoming Events</h2>
+      <!-- <h2>Upcoming Events</h2>
       <div class="events-list">
         <div v-for="(event, index) in upcomingEvents" :key="index" class="event-item">
           <div class="event-date">{{ event.date }}</div>
@@ -24,7 +24,7 @@
             <p>{{ event.description }}</p>
           </div>
         </div>
-      </div>
+      </div> -->
       <h2>Past Events</h2>
       <div class="events-list">
         <div v-for="(event, index) in pastEvents" :key="index" class="event-item">
@@ -69,16 +69,17 @@ const speakingTopics = [
 
 // Upcoming events
 const upcomingEvents = [
-  {
-    date: "19th August 2025",
-    title: "Learning From Students: Usability Testing the New Adelaide University Course Home Page",
-    venue: "Hilton Adelaide",
-    description: "What do students actually want from a course home page? We ran usability tests with 42 students on four key elements: navigation, course info, roadmap, and banner images. We’ll share what surprised us, and how one-on-one testing shifted our design approach."
-  }
+  
 ];
 
 // Past events
 const pastEvents = [
+{
+    date: "August 2025",
+    title: "Learning From Students: Usability Testing the New Adelaide University Course Home Page",
+    venue: "CanvasCon 2025 (Adelaide)",
+    description: "What do students actually want from a course home page? We ran usability tests with 42 students on four key elements: navigation, course info, roadmap, and banner images. We’ll share what surprised us, and how one-on-one testing shifted our design approach."
+  },
   {
     date: "April 2024",
     title: "Usability and Accessibility",

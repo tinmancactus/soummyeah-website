@@ -27,8 +27,8 @@ export default defineNuxtConfig({
         { innerHTML: "document.documentElement.classList.add('js-enabled'); document.body && document.body.classList.add('js-enabled');" }
       ]
     },
-    // Use baseURL from env var for GitHub Pages if available
-    baseURL: process.env.GITHUB_PAGES === 'true' ? '/soummyeah-website/' : '/'
+    // Don't use a baseURL for GitHub Pages since we're using a custom domain
+    baseURL: '/'
   },
 
   // Configure Nuxt Content for markdown

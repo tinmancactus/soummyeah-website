@@ -28,9 +28,16 @@ jobs:
           GITHUB_PAGES: 'true'
           NITRO_PRESET: 'static'
 
+      - name: Create CNAME file
+        run: echo "soummyeah.au" > ./.output/public/CNAME
+
+      - name: Create .nojekyll file
+        run: touch ./.output/public/.nojekyll
+        
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./.output/public
           force_orphan: true
+          cname: soummyeah.au

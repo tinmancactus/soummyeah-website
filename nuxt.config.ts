@@ -3,6 +3,13 @@
 export default defineNuxtConfig({
   // Disable SSR to use client-side rendering only
   ssr: false,
+  
+  // Use hash mode for GitHub Pages compatibility
+  router: {
+    options: {
+      hashMode: true
+    }
+  },
   modules: [
     '@nuxt/content'
   ],
@@ -51,8 +58,8 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    // Use github_pages preset when running in GitHub Actions
-    preset: process.env.NITRO_PRESET || 'static',
+    // Always use static preset for GitHub Pages deployment
+    preset: 'static',
     prerender: {
       crawlLinks: true,
       // Don't fail build on errors during prerendering

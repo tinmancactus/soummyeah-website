@@ -142,7 +142,7 @@ button:hover, .button:hover {
 
 /* Hamburger menu button */
 .menu-toggle {
-  display: none;
+  display: none; /* Hide by default on desktop */
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -226,20 +226,44 @@ button:hover, .button:hover {
 @media (max-width: 768px) {
   .header-inner {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
   }
   
+  .logo img {
+    height: 6rem !important; /* Override inline style for mobile */
+  }
+  
+  /* Only show menu toggle in mobile view */
   .menu-toggle {
     display: block;
+    position: relative;
+    top: auto;
+    right: auto;
+    z-index: 1000;
+  }
+  
+  /* Static nav is always visible in static HTML */
+  .static-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-white);
+    padding: var(--spacing-md);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
   }
   
   /* Hide static nav on mobile when JS is enabled */
-  .js-enabled .static-nav {
+  body.js-enabled .static-nav {
     display: none;
   }
   
   /* Show mobile nav when JS is enabled */
-  .js-enabled .mobile-nav {
+  body.js-enabled .mobile-nav {
     display: flex;
     position: fixed;
     top: 0;
@@ -260,7 +284,7 @@ button:hover, .button:hover {
   }
   
   /* Show mobile nav when open */
-  .js-enabled .mobile-nav.nav-open {
+  body.js-enabled .mobile-nav.nav-open {
     transform: translateX(0);
   }
   

@@ -1,6 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 // @ts-ignore - Nuxt auto-imports this function
 export default defineNuxtConfig({
+  // Disable SSR to use client-side rendering only
+  ssr: false,
   modules: [
     '@nuxt/content'
   ],
@@ -20,6 +22,9 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      ],
+      script: [
+        { innerHTML: "document.documentElement.classList.add('js-enabled'); document.body && document.body.classList.add('js-enabled');" }
       ]
     },
     // Use baseURL from env var for GitHub Pages if available

@@ -2,7 +2,7 @@
   <div>
     <header class="header">
       <div class="container header-inner">
-        <NuxtLink to="/" class="logo"><img src="../assets/images/logo.svg" alt="So Umm Yeah Logo" style="height:9rem;"></NuxtLink>
+        <NuxtLink to="/" class="logo"><img src="/images/logo.svg" alt="So Umm Yeah Logo" style="height:9rem;"></NuxtLink>
         
         <!-- Static navigation (visible by default, hidden by JS on mobile) -->
         <nav class="nav static-nav">

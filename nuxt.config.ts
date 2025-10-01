@@ -3,13 +3,6 @@
 export default defineNuxtConfig({
   // Disable SSR to use client-side rendering only
   ssr: false,
-  
-  // Use hash mode for GitHub Pages compatibility
-  router: {
-    options: {
-      hashMode: true
-    }
-  },
   modules: [
     '@nuxt/content'
   ],
@@ -76,7 +69,9 @@ export default defineNuxtConfig({
       dir: '.output',
       serverDir: '.output/server',
       publicDir: '.output/public'
-    }
+    },
+    // SPA fallback for client-side routing
+    compressPublicAssets: true
   },
 
   // Set CI mode to avoid TTY prompts

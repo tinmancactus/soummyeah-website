@@ -3,8 +3,8 @@
     <h1>Blog</h1>
     <p class="lead">Thoughts, insights, and explorations in learning experience design and creative technology.</p>
     
-    <div v-if="postsList.length">
-      <div v-for="post in postsList" :key="post._path" class="blog-post">
+    <div v-if="posts.length">
+      <div v-for="post in posts" :key="post._path" class="blog-post">
         <h2>
           <NuxtLink :to="post._path">{{ post.title }}</NuxtLink>
         </h2>
@@ -25,9 +25,6 @@ const { data: posts } = await useAsyncData('blog-posts', () => queryContent('/bl
   .sort({ date: -1 })
   .find()
 );
-
-// Computed property to safely access posts array
-const postsList = computed(() => posts.value || []);
 
 // Format date function
 const formatDate = (date) => {

@@ -71,12 +71,12 @@ const formatDate = (date) => {
 
 <style scoped>
 .hero {
-  padding: var(--spacing-3xl) 0;
+  padding: var(--spacing-2xl) 0;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: var(--spacing-md);
 }
 
